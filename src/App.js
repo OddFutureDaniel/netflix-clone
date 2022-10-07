@@ -4,10 +4,14 @@ import Row from "./Row";
 import requests from "./requests";
 import Banner from "./Banner";
 import Nav from "./Nav";
+import useMediaQuery from "./useMediaQuery";
 
 function App() {
+  const isDesktop = useMediaQuery("(min-width: 960px)");
+
   return (
     <div className="app">
+    {isDesktop ? <h1>Desktop</h1> : <h1>Mobile</h1>}
       <Nav />
       <Banner />
       <Row
