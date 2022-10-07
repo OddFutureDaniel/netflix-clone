@@ -1,0 +1,50 @@
+.nav {
+  display: flex;
+  position: fixed;
+  top: 0;
+  justify-content: space-between;
+  width: 100vw;
+  padding: 15px;
+  z-index: 1;
+  height: 60px;
+}
+
+.nav__Black {
+  background-color: rgb(12, 12, 12);
+  transition-timing-function: ease-in;
+  transition: all 0.3s;
+}
+
+.nav__Logo {
+  cursor: pointer;
+  position: fixed;
+  object-fit: contain;
+  width: 80px;
+  left: 20px;
+}
+
+.profile__Logo {
+  cursor: pointer;
+  position: fixed;
+  object-fit: contain;
+  right: 20px;
+  width: 30px;
+}
+
+.nav__Options {
+  position: absolute;
+  margin-left: 100px;
+  margin-top: 13px;
+  margin-right: 75px;
+}
+.nav__Button {
+  cursor: pointer;
+  color: white;
+  background-color: transparent;
+  border: none;
+  font-size: 0.9em;
+}
+
+.nav__Button:hover {
+  color: rgb(209, 209, 209);
+}
