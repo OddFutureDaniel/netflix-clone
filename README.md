@@ -16,5 +16,6 @@ Responsive web design (Media queries, Hamburger menu etc)
 
 Use of UseState and UseEffect
 
-React Hooks
+React Hooks, fragments
+
 
