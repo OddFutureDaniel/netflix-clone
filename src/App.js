@@ -7,11 +7,11 @@ import Nav from "./Nav";
 import useMediaQuery from "./useMediaQuery";
 
 function App() {
-  const isDesktop = useMediaQuery("(min-width: 960px)");
+  const isDesktop = useMediaQuery("(min-width: 600px)");
 
   return (
     <div className="app">
-    {isDesktop ? <h1>Desktop</h1> : <h1>Mobile</h1>}
+    {/* {isDesktop ? <h1>Desktop</h1> : <h1>Mobile</h1>} */}
       <Nav />
       <Banner />
       <Row

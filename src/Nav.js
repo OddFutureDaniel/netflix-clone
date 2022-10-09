@@ -1,8 +1,16 @@
 import React, { useEffect, useState } from "react";
 import "./Nav.css";
+import Hamburger from "./Hamburger";
+
 
 function Nav() {
   const [show, handleShow] = useState(false);
+  const [hamburgerOpen, setHamburgerOpen] = useState(false);
+  
+
+  const toggleHamburger = () => {
+    setHamburgerOpen(!hamburgerOpen);
+  };
 
   function scrollFunc() {
     if (window.scrollY > 40) {
@@ -13,9 +21,9 @@ function Nav() {
   }
 
   useEffect(() => {
-    window.addEventListener("scroll",scrollFunc);
+    window.addEventListener("scroll", scrollFunc);
     return () => {
-      window.removeEventListener("scroll",scrollFunc);
+      window.removeEventListener("scroll", scrollFunc);
     };
   }, []);
 
@@ -27,13 +35,43 @@ function Nav() {
         alt="Netflix Logo"
       />
       <div className="nav__Options">
-        <button className="nav__Button">Home</button>
-        <button className="nav__Button">Series</button>
-        <button className="nav__Button">Films</button>
-        <button className="nav__Button">New & Popular</button>
-        <button className="nav__Button">My List</button>
-        <button className="nav__Button">Browse by Languages</button>
+        <ul>
+          <button className="nav__Button">Home</button>
+          <button className="nav__Button">Series</button>
+          <button className="nav__Button">Films</button>
+          <button className="nav__Button">New & Popular</button>
+          <button className="nav__Button">My List</button>
+          <button className="nav__Button">Browse by Languages</button>
+        </ul>
       </div>
+      <div className="hamburger" onClick={toggleHamburger} >
+        <Hamburger onClick={toggleHamburger} />
+      </div>
+      <style jsx>
+        {`
+        @media (max-width: 600px){
+            .nav__Options ul {
+            display: ${hamburgerOpen ? "inline" : "none"};
+            height: 220px;
+            background-color:rgba(0,0,0,0.3);
+            backdrop-filter:blur(10px);
+            width: 185px;
+            position: absolute;
+            margin-top:30px;
+            padding-top:10px;
+            padding-inline-start:0;
+            border-radius:5px
+            
+          }
+
+          .nav__Options ul button {
+            display:flex;
+            flex-direction: column;
+            margin: 15px;
+          }
+        }
+        `}
+      </style>
       <img
         className="profile__Logo"
         src="https://mir-s3-cdn-cf.behance.net/project_modules/disp/64623a33850498.56ba69ac2a6f7.png"
