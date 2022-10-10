@@ -22,7 +22,7 @@
 }
 
 .nav__Black {
-  background-color: rgb(12, 12, 12);
+  background-color: #141414;
   transition-timing-function:ease;
   transition: all 0.3s;
 }
