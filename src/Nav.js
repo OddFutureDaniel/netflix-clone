@@ -10,6 +10,9 @@ function Nav() {
 
   const toggleHamburger = () => {
     setHamburgerOpen(!hamburgerOpen);
+    // if(window.screen.width > 600) {
+    //     setHamburgerOpen(!hamburgerOpen);
+    // }
   };
 
   function scrollFunc() {
@@ -47,7 +50,7 @@ function Nav() {
       <div className="hamburger" onClick={toggleHamburger} >
         <Hamburger onClick={toggleHamburger} />
       </div>
-      <style jsx>
+      <style jsx = "true">
         {`
         @media (max-width: 600px){
             .nav__Options ul {

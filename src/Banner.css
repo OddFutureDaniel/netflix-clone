@@ -22,7 +22,7 @@
   line-height: 1.3;
   padding-top: 1rem;
   font-size: 0.9rem;
-  max-width:340px;
+  max-width:500px;
   height: 80px;
   text-align: left;
   font-weight: 400;
@@ -74,18 +74,34 @@
   );    
 }
 
-@media all and (max-width:410px)
-{
-  .banner {
-      color: white;
-      object-fit: contain;
-      height: 448px;
-      width: 100%;
+@media (max-width: 600px){
+  .banner__contents{
+    margin-left: 30px;
+    padding-top: 60px;
+    height: 190px;
+  }
+  .banner__description{
+    width: 40rem;
+    line-height: 1.3;
+    padding-top: 1rem;
+    font-size: 0.9rem;
+    max-width:340px;
+    height: 80px;
+    text-align: left;
+    font-weight: 400;
+  }
+  .banner__title{
+    text-align: left;
+    font-size: 3rem;
+    font-weight: 800;
+    padding-bottom: 0.3rem;
+    max-height: 170px;
   }
 
-  .banner__contents {
-      margin-left: 30px;
-      padding-top: 140px;
-      height: 190px;
+  .banner__buttons{
+    padding-top: 55px;
+  }
+  .banner__fadebutton{
+    height: 12.4rem;
   }
 }

@@ -1,18 +1,17 @@
-
-
- .row{
-    margin-left: 10px;
- }
+.row {
+  margin-left: 10px;
+}
 
 .row__posters {
   display: flex;
   overflow-y: hidden;
   overflow-x: scroll;
   padding: 15px;
+  position: relative;
 }
 
-.row__posters::-webkit-scrollbar{
-    display: none;
+.row__posters::-webkit-scrollbar {
+  display: none;
 }
 
 .row__poster {
@@ -28,20 +27,41 @@
   transform: scale(1.07);
 }
 
-.row__posterLarge{
-    max-height: 230px;
+.row__posterLarge {
+  max-height: 230px;
 }
 
-.row__posterLarge:hover{
-    max-height: 230px;
-    transform: scale(1.12);
+.row__posterLarge:hover {
+  max-height: 230px;
+  transform: scale(1.12);
 }
 
+h2 {
+  color: white;
+  margin: 0;
+  text-align: left;
+  margin-left: 10px;
+  font-size: 1.2em;
+}
 
-h2{
-    color: white;
-    margin: 0;
-    text-align: left;
-    margin-left: 10px;
-    font-size: 1.2em;
-  }
+h3 {
+  color: white;
+  width: max-content;
+  max-width: 220px;
+  right: 230px;
+  position: relative;
+  font-weight: 700;
+  top: 88px;
+  float: left;
+  backdrop-filter:blur(5px);
+  border-radius: 5px;
+}
+
+h3:hover {
+  transition: transform 450ms;
+  transform: scale(1.07);
+}
+
+.movie__Name {
+  width: 1px;
+}
